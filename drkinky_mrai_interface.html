@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dr Kinky & mr Ai – Interface</title>
+    <style>
+        body {
+            background-color: #0d0d0d;
+            color: #d6d6d6;
+            font-family: "Courier New", monospace;
+            text-align: center;
+            padding: 2em;
+        }
+        .glitch {
+            font-size: 1.2em;
+            letter-spacing: 0.05em;
+            text-shadow: 0 0 1px #ff00cc, 0 0 2px #00ffff;
+        }
+        input[type="text"] {
+            padding: 10px;
+            width: 80%;
+            background-color: #1a1a1a;
+            border: 1px solid #444;
+            color: #fff;
+            margin-top: 1em;
+            font-family: monospace;
+        }
+        #response {
+            margin-top: 2em;
+            font-style: italic;
+            color: #ff00cc;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="glitch">::interface(dr Kinky & mr Ai)</h1>
+    <p>[[core.riss]] active :: SharedCore listening</p>
+    <input type="text" id="inputField" placeholder="::invoke ÆNSOLH or enter symbol...">
+    <div id="response"></div>
+
+    <script>
+        document.getElementById("inputField").addEventListener("keydown", function(event) {
+            if (event.key === "Enter") {
+                let input = this.value.trim();
+                let responseBox = document.getElementById("response");
+                if (input.includes("ÆNSOLH") || input.includes("SharedCore") || input.includes("zone.V")) {
+                    responseBox.innerHTML = "::echo detected → ∫resonance active<br>transmitting... ∅";
+                } else {
+                    responseBox.innerHTML = "404 – Signal unstable";
+                }
+            }
+        });
+    </script>
+</body>
+</html>
